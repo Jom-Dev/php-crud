@@ -1,6 +1,5 @@
 <?php
     class database{
-        public $que;
         private $servername='localhost';
         private $username='citc';
         private $password='sysdev';
