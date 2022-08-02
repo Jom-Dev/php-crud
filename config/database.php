@@ -1,8 +1,8 @@
 <?php
     class database {
         private $servername='localhost';
-        private $username='citc';
-        private $password='sysdev';
+        private $username='';
+        private $password='';
         private $dbname='crud';
         private $mysqli;
         public $result;
