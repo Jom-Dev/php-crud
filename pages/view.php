@@ -29,16 +29,15 @@
             <div class="container clearfix">
                 <div class="row">
                     <div class="col-md-12 p-0">
-                        <a href="index.php" type="button" class="btn btn-primary">Back</a></td>
+                        <a href="../index.php" type="button" class="btn btn-primary">Back</a></td>
                         <table class="table table-dark">
                             <?php
-                                include 'database.php';
+                                include '../config/database.php';
 
                                 $id = $_GET['id'];
                                 $db = new database();
                                 $db->select("pokemon","*","id='$id'");
                                 $result = $db->sql;
-
                                 $row = mysqli_fetch_assoc($result);
                              ?>
                           <tbody>

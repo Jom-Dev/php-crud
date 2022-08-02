@@ -1,5 +1,5 @@
 <?php
-    include 'database.php';
+    include '../config/database.php';
 
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
@@ -9,7 +9,7 @@
         $db = new database();
         $db->insert('pokemon', ['name'=>$name, 'skill'=>$skill, 'created'=>$date]);
         if ($db == true) {
-            header('location:index.php');
+            header('location:../index.php');
         }
     }
 ?>

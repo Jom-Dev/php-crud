@@ -29,21 +29,19 @@
                 <div class="container clearfix">
                     <div class="row">
                         <?php
-                            include 'database.php';
+                            include '../config/database.php';
 
                             $id = $_GET['id'];
-
                             $db = new database();
                             $db->select("pokemon","*", "id='$id'");
                             $result = $db->sql;
-
                             $row = mysqli_fetch_assoc($result);
                         ?>
                         <div class="col-md-12" id="hide">
-                            <a href="index.php" type="button" class="btn btn-primary">Back</a></td>
-                            <form  class="row form" action="update.php" method="post">
+                            <a href="../index.php" type="button" class="btn btn-primary">Back</a></td>
+                            <form  class="row form" action="../operations/update.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                <?php include 'form.php'; ?>
+                                <?php include '../pages/component/form.php'; ?>
                                 <div class="col-12 form-group">
                                     <input type="submit" class="btn btn-dark" name="submit" value="Update">
                                 </div>

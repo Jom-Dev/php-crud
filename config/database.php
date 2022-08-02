@@ -1,11 +1,11 @@
 <?php
-    class database{
+    class database {
         private $servername='localhost';
         private $username='citc';
         private $password='sysdev';
         private $dbname='crud';
-        private $result;
         private $mysqli;
+        public $result;
         public $sql;
 
         public function __construct(){
@@ -29,7 +29,6 @@
             }
 
             $sql="UPDATE $table SET " . implode(',', $args);
-
             $sql .=" WHERE $id";
 
             $result = $this->mysqli->query($sql);
@@ -39,6 +38,7 @@
             $sql="DELETE FROM $table";
             $sql .=" WHERE $id ";
             $sql;
+
             $result = $this->mysqli->query($sql);
         }
 
