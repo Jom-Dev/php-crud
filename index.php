@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <title>PHP CRUD with Ajax, Jquery, Bootstrap, SweetAlert2</title>
+    <title>PHP CRUD with Ajax, Jquery, Bootstrap5, SweetAlert2</title>
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-title">
-                        <h1>Add New Pokemon</h1>
-                    </div>
                     <form action="operations/insert.php" method="post">
                         <div class="card-body">
+                            <div class="card-title">
+                                <h2>Add New Pokemon</h2>
+                            </div>
                             <?php include 'pages/component/form.php'; ?>
                         </div>
                         <div class="card-footer">
@@ -55,13 +55,13 @@
                                 <td><?php echo $row['created']; ?></td>
                                 <td><?php echo $row['updated']; ?></td>
                                 <td>
-                                    <a href="pages/view.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-success btn-sm">View</a>
+                                    <a href="pages/view.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-success btn-sm w-100">View</a>
                                 </td>
                                 <td>
-                                    <a href="pages/edit.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-primary btn-sm">Edit</a>
+                                    <a href="pages/edit.php?id=<?php echo $row['id']; ?>" type="button" class="btn btn-primary btn-sm w-100">Edit</a>
                                 </td>
                                 <td>
-                                    <a href="" type="button"  data-toggle="modal" data-id="<?php echo $row['id']; ?>" data-target="#myModal" id="btn_delete" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="" type="button"  data-toggle="modal" data-id="<?php echo $row['id']; ?>" data-target="#myModal" id="btn_delete" class="btn btn-danger btn-sm w-100">Delete</a>
                                 </td>
                             </tr>
                         <?php } ?>
